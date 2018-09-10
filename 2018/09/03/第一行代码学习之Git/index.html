@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Vni&#39;s world</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="第一行代码学习之Git初识版本控制工具基本操作配置身份​git config –globle user.name “xxx”                                                  git config –globle user.email “xxx” 创建代码仓库进入项目的目录下   git init 查看Git操作ls -al 提交本地代码添加git">
+  <meta name="description" content="[TOC] 第一行代码学习之Git版本控制工具初识基本操作配置身份​git config –globle user.name “xxx”                                                  git config –globle user.email “xxx” 创建代码仓库进入项目的目录下   git init 查看Git操作ls -al 提交本地代码">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Vni&#39;s world">
 <meta property="og:url" content="http://yoursite.com/2018/09/03/第一行代码学习之Git/index.html">
 <meta property="og:site_name" content="Vni&#39;s world">
-<meta property="og:description" content="第一行代码学习之Git初识版本控制工具基本操作配置身份​git config –globle user.name “xxx”                                                  git config –globle user.email “xxx” 创建代码仓库进入项目的目录下   git init 查看Git操作ls -al 提交本地代码添加git">
+<meta property="og:description" content="[TOC] 第一行代码学习之Git版本控制工具初识基本操作配置身份​git config –globle user.name “xxx”                                                  git config –globle user.email “xxx” 创建代码仓库进入项目的目录下   git init 查看Git操作ls -al 提交本地代码">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-09-03T06:50:02.191Z">
+<meta property="og:updated_time" content="2018-09-10T12:55:39.629Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vni&#39;s world">
-<meta name="twitter:description" content="第一行代码学习之Git初识版本控制工具基本操作配置身份​git config –globle user.name “xxx”                                                  git config –globle user.email “xxx” 创建代码仓库进入项目的目录下   git init 查看Git操作ls -al 提交本地代码添加git">
+<meta name="twitter:description" content="[TOC] 第一行代码学习之Git版本控制工具初识基本操作配置身份​git config –globle user.name “xxx”                                                  git config –globle user.email “xxx” 创建代码仓库进入项目的目录下   git init 查看Git操作ls -al 提交本地代码">
   
     <link rel="alternative" href="/atom.xml" title="Vni&#39;s world" type="application/atom+xml">
   
@@ -163,15 +163,37 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="第一行代码学习之Git"><a href="#第一行代码学习之Git" class="headerlink" title="第一行代码学习之Git"></a>第一行代码学习之Git</h1><h2 id="初识版本控制工具"><a href="#初识版本控制工具" class="headerlink" title="初识版本控制工具"></a>初识版本控制工具</h2><h3 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h3><h4 id="配置身份"><a href="#配置身份" class="headerlink" title="配置身份"></a>配置身份</h4><p>​git config –globle user.name “xxx”                                                 </p>
+        <p>[TOC]</p>
+<h1 id="第一行代码学习之Git"><a href="#第一行代码学习之Git" class="headerlink" title="第一行代码学习之Git"></a>第一行代码学习之Git</h1><h2 id="版本控制工具初识"><a href="#版本控制工具初识" class="headerlink" title="版本控制工具初识"></a>版本控制工具初识</h2><h3 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h3><h4 id="配置身份"><a href="#配置身份" class="headerlink" title="配置身份"></a>配置身份</h4><p>​git config –globle user.name “xxx”                                                 </p>
 <p>git config –globle user.email “xxx”</p>
 <h4 id="创建代码仓库"><a href="#创建代码仓库" class="headerlink" title="创建代码仓库"></a>创建代码仓库</h4><p>进入项目的目录下  </p>
 <p>git init</p>
 <h4 id="查看Git操作"><a href="#查看Git操作" class="headerlink" title="查看Git操作"></a>查看Git操作</h4><p>ls -al</p>
 <h4 id="提交本地代码"><a href="#提交本地代码" class="headerlink" title="提交本地代码"></a>提交本地代码</h4><p>添加git add build.gradle</p>
 <p>​        git add app</p>
-<p>​    git add .</p>
-<p>提交git commit -m “提交的描述信息”</p>
+<pre><code>git add .
+</code></pre><p>提交git commit -m “提交的描述信息”</p>
+<h2 id="版本控制工具进阶"><a href="#版本控制工具进阶" class="headerlink" title="版本控制工具进阶"></a>版本控制工具进阶</h2><h3 id="忽略文件"><a href="#忽略文件" class="headerlink" title="忽略文件"></a>忽略文件</h3><p>AndroidStudio在创建项目时会自动帮我们创建出两个.gitignore文件。</p>
+<p>一个在根目录下(一般是Android Studio自动生成的一些默认配置，通常情况下不需要添加到版本控制当中)</p>
+<p>另一个在app模板下(这个模板下基本上是我们编写的代码，因此默认情况下只有其中的built目录不会被添加到版本控制当中)</p>
+<p>我们可以对以上两个文件进行任意的修改，比如：app模板下的所有测试内容都只是我自己使用，并不想添加到版本控制当中，那么可以这样修改app/.gitignore文件中的内容:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="查看修改内容"><a href="#查看修改内容" class="headerlink" title="查看修改内容"></a>查看修改内容</h3><p>检查状况</p>
+<p>git status</p>
+<p>查看所有文件的更改内容</p>
+<p>git diff</p>
+<p>查看具体文件的更改内容</p>
+<p>git diff app/src/main/java/com/example/asus/providertest/MainActivity.java</p>
+<h3 id="撤销修改"><a href="#撤销修改" class="headerlink" title="撤销修改"></a>撤销修改</h3><p>只要代码还未提交(还没有执行过add命令的文件)，所有的修改内容都是可以撤销的</p>
+<p>git checkout app/src/main/java/com/example/asus/providertest/MainActivity.java</p>
+<p>对于提交过的文件，需要先取消提交</p>
+<p>git reset HEAD app/src/main/java/com/example/providertest/MainActivity.java</p>
+<h3 id="查看提交记录"><a href="#查看提交记录" class="headerlink" title="查看提交记录"></a>查看提交记录</h3><p>查看历史提交信息(每次提交记录会包括提交id，提交人，提交日期以及提交描述)</p>
+<p>git log</p>
+<p>只想查看一条记录时，可以在命令中指定记录的id并加上-1参数</p>
+<p>git log 33c6b07ba9a69861b376c5c3b9d0be8a43c995ec -1</p>
+<p>而想看这条提交记录具体修改什么内容时，可以在命令中加入-p参数</p>
+<p>git log 33c6b07ba9a69861b376c5c3b9d0be8a43c995ec -1 -p</p>
 
       
 
@@ -264,6 +286,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2018/09/10/第一行代码学习之内容提供器/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
   
   
     <a href="/2018/09/03/第一行代码学习之储存/" id="article-nav-older" class="article-nav-link-wrap">
